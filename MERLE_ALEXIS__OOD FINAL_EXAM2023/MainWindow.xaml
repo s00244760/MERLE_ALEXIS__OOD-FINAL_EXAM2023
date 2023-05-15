@@ -41,6 +41,11 @@
         <Label Content="Select Movie from list above," HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="20,0,0,30" FontSize="10"/>
         <Label Content="choose date and tickets required" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="20,0,0,20" FontSize="10"/>
         <TextBlock Grid.Column="1" Margin="20,50,40,70" Grid.RowSpan="2" Name ="tblkSynopsis" TextWrapping="Wrap"/>
+        <Button Content="Book Seats" Name ="Booking" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="Available Seats" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" Margin="20,0,0,30" FontSize="10"/>
+        <Label Content="Required Seats" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" Margin="150,0,0,30" FontSize="10"/>
+        <Label Content="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" Margin="20,0,0,10" FontSize="10"/>
+        
     </Grid>
 </Window>
     
