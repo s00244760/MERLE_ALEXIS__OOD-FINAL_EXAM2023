@@ -21,6 +21,15 @@ namespace MERLE_ALEXIS__OOD_FINAL_EXAM2023
 
         public string Cast { get; set; }
 
+        public List<Booking> BookingDays;
+
+
+        public void AddBookingDay(Booking day)
+        {
+            BookingDays.Add(day);
+
+        }
+
         // overried string method
 
         public override string ToString()

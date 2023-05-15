@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MERLE_ALEXIS__OOD_FINAL_EXAM2023
 {
+    //start of class booking
     public class Booking
     {
         public int BookingID { get; set; }
@@ -14,4 +15,5 @@ namespace MERLE_ALEXIS__OOD_FINAL_EXAM2023
 
         public int NumberOfTickets { get; set; }
     }
+    //end of class booking
 }

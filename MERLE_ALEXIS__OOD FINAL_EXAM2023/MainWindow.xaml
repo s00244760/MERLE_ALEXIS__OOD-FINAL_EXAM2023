@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="dataTemplateMovies">
+            <StackPanel Orientation="Horizontal">
+            <Image Source="{Binding Path=ImageName}" Width="100"/>
+                <StackPanel Orientation="Vertical">
+                    
+                
+                <TextBlock Text="{Binding Path =Title}" FontSize="14" 
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding Path =Cast}" FontSize="12"  
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+            
+        </DataTemplate>
+    </Window.Resources>
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="*"/>
@@ -17,7 +33,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="20,50,20,80" Name="lbxMovies" SelectionChanged="lbxMovies_selectionChanged"/>
+        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="20,50,20,80" Name="lbxMovies" SelectionChanged="lbxMovies_selectionChanged"
+                 ItemTemplate="{StaticResource dataTemplateMovies}"/>
         <Label Content="Movie Listings" FontSize="12" Margin="20,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Movie Synopsis" Grid.Column="1" FontSize="12" Margin ="20,10,0,0"/>
         <Label Content="Quick Book" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="20,0,0,50" FontSize="12"/>
