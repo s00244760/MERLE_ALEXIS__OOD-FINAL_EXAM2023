@@ -20,9 +20,24 @@ namespace MERLE_ALEXIS__OOD_FINAL_EXAM2023
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        List<Movie> allMovies;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            MovieData db = new MovieData();
+
+            var query = from m in db.Movies
+                        orderby m.Title
+                        select m;
+
+            allMovies = query.ToList();
+
+            lbxMovies.ItemsSource = allMovies;   
         }
     }
 }

@@ -21,7 +21,12 @@ namespace MERLE_ALEXIS__OOD_FINAL_EXAM2023
 
         public string Cast { get; set; }
 
-        
+        // overried string method
+
+        public override string ToString()
+        {
+            return Title; 
+        }
     }// end of class movie 
 
     //data class
