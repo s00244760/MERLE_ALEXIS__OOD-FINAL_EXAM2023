@@ -17,8 +17,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="20,50,20,50" Name="lbxMovies"/>
+        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="20,50,20,80" Name="lbxMovies" SelectionChanged="lbxMovies_selectionChanged"/>
         <Label Content="Movie Listings" FontSize="12" Margin="20,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Movie Synopsis" Grid.Column="1" FontSize="12" Margin ="20,10,0,0"/>
+        <Label Content="Quick Book" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="20,0,0,50" FontSize="12"/>
+        <Label Content="Select Movie from list above," HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="20,0,0,30" FontSize="10"/>
+        <Label Content="choose date and tickets required" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="20,0,0,20" FontSize="10"/>
+        <TextBlock Grid.Column="1" Margin="20,50,40,70" Grid.RowSpan="2" Name ="tblkSynopsis" TextWrapping="Wrap"/>
     </Grid>
 </Window>
     

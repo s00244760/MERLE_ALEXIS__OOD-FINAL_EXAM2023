@@ -39,5 +39,24 @@ namespace MERLE_ALEXIS__OOD_FINAL_EXAM2023
 
             lbxMovies.ItemsSource = allMovies;   
         }
+
+        private void lbxMovies_selectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //determine what was selected
+
+            Movie selected = lbxMovies.SelectedItem as Movie;
+
+
+
+            //check not null
+
+
+            if (selected != null)
+            {
+                tblkSynopsis.Text = selected.Description;
+
+            }
+            //update display
+        }
     }
 }
